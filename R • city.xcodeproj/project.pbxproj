@@ -14,6 +14,7 @@
 		AF3C63DC284F420600337E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3C63DB284F420600337E95 /* Assets.xcassets */; };
 		AF3C63DF284F420600337E95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3C63DD284F420600337E95 /* LaunchScreen.storyboard */; };
 		AF3C63E7284F476400337E95 /* MainScreenTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C63E6284F476400337E95 /* MainScreenTVC.swift */; };
+		AF3C63E9284F58C500337E95 /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C63E8284F58C500337E95 /* CustomTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AF3C63DE284F420600337E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF3C63E0284F420600337E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF3C63E6284F476400337E95 /* MainScreenTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTVC.swift; sourceTree = "<group>"; };
+		AF3C63E8284F58C500337E95 /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				AF3C63CF284F420000337E95 /* AppDelegate.swift */,
 				AF3C63D1284F420000337E95 /* SceneDelegate.swift */,
 				AF3C63D5284F420000337E95 /* Main.storyboard */,
+				AF3C63E8284F58C500337E95 /* CustomTVC.swift */,
 				AF3C63E6284F476400337E95 /* MainScreenTVC.swift */,
 				AF3C63DB284F420600337E95 /* Assets.xcassets */,
 				AF3C63DD284F420600337E95 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 				AF3C63DA284F420000337E95 /* R___city.xcdatamodeld in Sources */,
 				AF3C63D0284F420000337E95 /* AppDelegate.swift in Sources */,
 				AF3C63D2284F420000337E95 /* SceneDelegate.swift in Sources */,
+				AF3C63E9284F58C500337E95 /* CustomTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

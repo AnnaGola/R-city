@@ -25,11 +25,11 @@ class MainScreenTVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = favoritePlaces[indexPath.row] //здесь я нулевому индексу строки добавляю значение нулевого индекса массиваб чтобы текст этой строки стал собержимым массива по нулевому индексу
-        cell.imageView?.image = UIImage(named: favoritePlaces[indexPath.row])
-        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 5
-        cell.imageView?.clipsToBounds = true
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTVC
+        cell.nameLabel.text = favoritePlaces[indexPath.row] //здесь я нулевому индексу строки добавляю значение нулевого индекса массиваб чтобы текст этой строки стал собержимым массива по нулевому индексу
+        cell.imageOfPlace.image = UIImage(named: favoritePlaces[indexPath.row])
+        cell.imageOfPlace.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 5
+        cell.imageOfPlace.clipsToBounds = true
         return cell
     }
     
