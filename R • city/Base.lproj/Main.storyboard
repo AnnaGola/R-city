@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main ScreenTVC-->
+        <!--Суздаль-->
         <scene sceneID="048-J5-7OZ">
             <objects>
                 <tableViewController id="0Kw-El-qaJ" customClass="MainScreenTVC" customModule="R___city" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="0Kw-El-qaJ" id="STp-f8-GoT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yXa-dc-ykf"/>
+                    <navigationItem key="navigationItem" title="Суздаль" id="yXa-dc-ykf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9F0-nL-L3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +44,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Xi-di-rA7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
