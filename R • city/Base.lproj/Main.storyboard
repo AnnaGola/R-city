@@ -88,6 +88,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Suzdal" id="xu0-Up-fwz">
+                        <barButtonItem key="leftBarButtonItem" title="Map" id="i0K-2v-BYW">
+                            <imageReference key="image" image="map" catalog="system" symbolScale="default"/>
+                            <connections>
+                                <action selector="mapPressed:" destination="KI7-En-K6G" id="7dF-kd-5wh"/>
+                                <segue destination="rmQ-VW-lRL" kind="presentation" modalPresentationStyle="fullScreen" id="fhw-QZ-NLc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uaT-zd-ew1">
                             <connections>
                                 <segue destination="cEi-BF-7dZ" kind="popoverPresentation" popoverAnchorBarButtonItem="uaT-zd-ew1" id="cWR-U8-dE4">
@@ -96,7 +103,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="mapWithAllPlaces" destination="i0K-2v-BYW" id="4La-U5-oPB"/>
                         <outlet property="tableView" destination="fja-Eq-f8O" id="LMj-P0-Evr"/>
                     </connections>
                 </viewController>
@@ -426,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sC-NL-rEs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1608.6956521739132" y="-139.28571428571428"/>
+            <point key="canvasLocation" x="1632" y="-139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3HV-c3-pVB">
@@ -476,6 +485,7 @@
         <image name="Photo" width="195" height="196"/>
         <image name="Point" width="165" height="234.5"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="map" width="50" height="50"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>

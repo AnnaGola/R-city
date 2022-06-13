@@ -17,7 +17,7 @@ protocol MapViewControllerDelegare {
 class MapVC: UIViewController {
 
     let locationManager = CLLocationManager()
-    let regionInMeters = 1000.00
+    var regionInMeters = 3000.00
     var placeCoordinate: CLLocationCoordinate2D?
     var directionsArray: [MKDirections] = []
     var mapViewControllerDelegate: MapViewControllerDelegare?
@@ -27,8 +27,8 @@ class MapVC: UIViewController {
     var previousLocation: CLLocation? {
         didSet {
             startTrackingUserLocation()
-                }
-            }
+        }
+    }
     
     @IBOutlet weak var getDirectionButton: UIButton!
     @IBOutlet weak var marker: UIImageView!
@@ -115,7 +115,7 @@ class MapVC: UIViewController {
             getDirectionButton.isHidden = false
         }
     }
-    
+// сброс всех предыдущих маршрутов при изменении маршрута пользователем, чтобы они не накладывались друг на друга
     func resetMapView(withNew directions: MKDirections) {
         
         mapView.removeOverlays(mapView.overlays)
@@ -166,7 +166,7 @@ class MapVC: UIViewController {
             }
         }
     }
-
+    
     
     func checkLocationAuthorization() {
         
@@ -205,7 +205,6 @@ class MapVC: UIViewController {
         }
     }
     
-    
     func showUserLocation() {
         
         if let location = locationManager.location?.coordinate {
@@ -216,8 +215,6 @@ class MapVC: UIViewController {
        }
     }
 
-    
-    
     func createDirectionsRequest(from coordinate: CLLocationCoordinate2D) -> MKDirections.Request? {
         
         guard let destinationCoordinate = placeCoordinate else { return nil }
@@ -233,6 +230,7 @@ class MapVC: UIViewController {
         return request
     }
     
+    
     func startTrackingUserLocation() {
         
         guard let previousLocation = previousLocation else { return }
@@ -245,6 +243,8 @@ class MapVC: UIViewController {
         }
         
     }
+     
+    
     
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         
@@ -260,9 +260,8 @@ class MapVC: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default)
         alert.addAction(okAction)
-        present(alert, animated:  true)
+        present(alert, animated: true)
     }
-   
 }
 
 extension MapVC: MKMapViewDelegate {
@@ -290,12 +289,6 @@ extension MapVC: MKMapViewDelegate {
         let center = getCenterLocation(for: mapView)
         let geocoder = CLGeocoder()
         
-        if incomeSegueIdentifier == "showMap" && previousLocation != nil {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                self.showUserLocation()
-          }
-        }
-        
         geocoder.cancelGeocode()
         
         geocoder.reverseGeocodeLocation(center) { (placemarks, error) in
@@ -311,11 +304,11 @@ extension MapVC: MKMapViewDelegate {
             
             DispatchQueue.main.async {
                 if streetName != nil && buildNumber != nil {
-                   self.currentAddress.text = "\(streetName!), \(buildNumber!)"
+                    self.currentAddress.text = "\(streetName!), \(buildNumber!)"
                 } else if streetName != nil {
-                   self.currentAddress.text = "\(streetName!)"
+                    self.currentAddress.text = "\(streetName!)"
                 } else {
-                   self.currentAddress.text = ""
+                    self.currentAddress.text = ""
                 }
             }
         }

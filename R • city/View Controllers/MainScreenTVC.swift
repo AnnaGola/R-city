@@ -7,19 +7,20 @@
 
 import UIKit
 import RealmSwift
+import MapKit
 
 class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var places: Results<Place>!
     
+    @IBOutlet weak var mapWithAllPlaces: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeObserver()
         places = realm.objects(Place.self)
     }
-
-    
     
     // MARK: - Table view data source
     
@@ -47,6 +48,19 @@ class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
    
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
+    }
+  
+    func swipeObserver() {
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+    }
+    
+    @objc func handleSwipe(gesture: UISwipeGestureRecognizer) {
+        let alert = UIAlertController(title: "Oops!", message: "this function is not available now, sorry", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -80,4 +94,8 @@ class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         newPlaceVC.savePlace()
         tableView.reloadData()
     }
+    
+    @IBAction func mapPressed(_ sender: UIBarButtonItem) {
+    }
+  
 }

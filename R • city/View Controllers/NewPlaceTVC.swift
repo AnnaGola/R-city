@@ -21,7 +21,8 @@ class NewPlaceTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        saveButton.isEnabled = false        
+        saveButton.isEnabled = false
+        placeLocationTF.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         placeNameTF.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setUpEditScreen()
     }
@@ -146,7 +147,7 @@ extension NewPlaceTVC: UITextFieldDelegate {
     }
     
     @objc private func textFieldChanged() {
-        if placeNameTF.text?.isEmpty == false {
+        if placeLocationTF.text?.isEmpty == false && placeNameTF.text?.isEmpty == false {
            saveButton.isEnabled = true
         } else {
            saveButton.isEnabled = false
