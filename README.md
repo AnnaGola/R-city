@@ -19,12 +19,13 @@
 
 При нажатии на "+" в правом верхнем углу экрана, пользователь перейдет на другой экран под названием "New Place" в котором может выбрать изображение из фотоальбома или сделать снимок на месте.
 
-<img scr="https://github.com/AnnaGola/R-city/blob/realmBranch/ScreenShots/IMG_6842.jpeg" width="160">
+<img src="https://github.com/AnnaGola/R-city/blob/realmBranch/ScreenShots/IMG_6842.jpeg" width="160"> <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/ScreenShots/IMG_6843.jpeg" width="160">
 
-Если же пользователь не прикрепит фото к месту, оно прикрепится по дефолту из каталога assets: 
-```swift
-let image = imageIsChanged ? placeImage.image : #imageLiteral(resourceName: "imagePlaceholder")
-```
+Если же пользователь не прикрепит фото к месту, оно прикрепится по дефолту из каталога assets.
+
+<img src="https://github.com/AnnaGola/R-city/blob/realmBranch/ScreenShots/blabk-map-pin-flat-location-sign-blank-circle-icon-vector-10812853.jpg" width="160">
+
+
 Далее обязательно нужно установить название места и его адрес, без котороих кнопка  **SAVE**  не будет работать, и опционально краткое описание.
 
 ```swift
@@ -45,33 +46,16 @@ let image = imageIsChanged ? placeImage.image : #imageLiteral(resourceName: "ima
 ***Карта из поля редактирования Image*** открывается карта с таким функционалом:
 
 * Кнопка закрытия экрана в правом верхнем углу [x] благодаря функуии dismiss()
-* Кнопка для отображения геологации пользователя на данный момент: 
-```swift
-   func showUserLocation() {
-        
-        if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion(center: location,
-                                            latitudinalMeters: regionInMeters,
-                                            longitudinalMeters: regionInMeters)
-            mapView.setRegion(region, animated: true)
-       }
-    }
-```
-* Кнопка для нахождения всех пеших маршрутов до пункта назначения от местоположения пользователя, показывающая через расширение расстояние в километрах и время в минутах до этого места:
+* Кнопка для отображения геологации пользователя на данный момент.
+* Кнопка для нахождения всех пеших маршрутов до пункта назначения от местоположения пользователя, показывающая через расширение расстояние в километрах и время в минутах до этого места.
 
-```swift
-let distance = String(format: "%.1f", route.distance / 1000)
-                let timeInteral = Int(route.expectedTravelTime / 60)
-                
-                self.distanceAndTimeLabel.isHidden = false
-                self.distanceAndTimeLabel.text = "Walking for \(timeInteral) min 
-                Distance is \(distance) km"
-```
+     <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/ScreenShots/IMG_6844.jpeg" width="160"> <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/ScreenShots/IMG_6848.jpeg" width="160">
+
 ***Карта из поля редактирования Location*** открывается карта с таким функционалом: 
 
 //помимо кнопки закрытия экрана и кнопки определения геолокации пользователя, появляются отличные от другого экрана функции
 
-* Красный пин, указывающий на центр экрана, при наведении его на любое место на карте, в лейбле над ним будет вывден адрес с номером улицы и дома или только с номером улици, если дом невозможно определить
+* Красный пин, указывающий на центр экрана, при наведении его на любое место на карте, в лейбле над ним будет вывден адрес с номером улицы и дома или только с номером улици, если дом невозможно определить блягодаря GCD:
 
 ```swift
  DispatchQueue.main.async {
@@ -84,8 +68,7 @@ let distance = String(format: "%.1f", route.distance / 1000)
     }
  }
 ```
-* Для сохранения адреса, выставленного таким образом, есть специальная кнопка  **DONE**  внизу экрана, которая будет транслировать выбранный адрес в TextField Location на экране редактирования
-```swift
- mapViewControllerDelegate?.getAdderess(currentAddress.text)
-        dismiss(animated: true)
-```
+
+<img src="https://github.com/AnnaGola/R-city/blob/realmBranch/ScreenShots/IMG_6846.jpeg" width="160">
+
+* Для сохранения адреса, выставленного таким образом, есть специальная кнопка  **DONE**  внизу экрана, которая будет транслировать выбранный адрес в TextField Location на экране редактирования.
