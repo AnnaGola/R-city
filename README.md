@@ -72,3 +72,14 @@
 <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/ScreenShots/IMG_6846.jpeg" width="160">
 
 * Для сохранения адреса, выставленного таким образом, есть специальная кнопка  **DONE**  внизу экрана, которая будет транслировать выбранный адрес в TextField Location на экране редактирования.
+
+// На данный момент дорабатываю приложение, чтобы отображать все любимые места на карте одновременно, заходя с главного экрана. Также есть некоторые функции, которые уже прописаны, но вместо полной реализации там добавлены только алерты с предупреждением, что этот раздел находится в разработке: 
+
+```swift
+ @objc func handleSwipe(gesture: UISwipeGestureRecognizer) {
+    let alert = UIAlertController(title: "Oops!", message: "this function is not available now, sorry", preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "Okay", style: .default)
+    alert.addAction(okAction)
+    present(alert, animated: true)
+}
+```
