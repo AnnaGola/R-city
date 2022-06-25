@@ -81,11 +81,9 @@ class NewPlaceTVC: UITableViewController {
         mapVC.place.location = placeLocationTF.text
         mapVC.place.shortDescription = placeDescriptionTF.text
         mapVC.place.imageData = placeImage.image?.pngData()
-        // это то, что покажется на карте в виде пина с названием, описанием и картинкой по выбранному адресу
         }
     }
-    
-    // сохраняет новые и измененные данные вне зависимости от режима создания записи или ее редактирования
+
     func savePlace() {
         
         let image = imageIsChanged ? placeImage.image : #imageLiteral(resourceName: "imagePlaceholder")
@@ -102,7 +100,7 @@ class NewPlaceTVC: UITableViewController {
                 currentPlace?.imageData = newPlace.imageData
             }
         } else {
-            Manager.saveObject(newPlace) // добавление новой записи в базе данных
+            Manager.saveObject(newPlace)
         }
     }
     
@@ -119,7 +117,6 @@ class NewPlaceTVC: UITableViewController {
             placeNameTF.text = currentPlace?.name
             placeLocationTF.text = currentPlace?.location
             placeDescriptionTF.text = currentPlace?.shortDescription
-            // создание окна с редактированием уже существующих данных, с последующим их сохранением в этом же файле
         }
     }
     

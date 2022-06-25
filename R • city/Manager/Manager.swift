@@ -12,13 +12,13 @@ let realm = try! Realm()
 class Manager {
     static func saveObject(_ place: Place) {
         try! realm.write {
-            realm.add(place) // как сохранить объекты в приложении
+            realm.add(place) 
         }
     }
     
     static func deleteObject(_ place: Place) {
         try! realm.write {
-            realm.delete(place) // как удалить объекты из приложения
+            realm.delete(place)
         }
     }
 }

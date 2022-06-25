@@ -115,7 +115,7 @@ class MapVC: UIViewController {
             getDirectionButton.isHidden = false
         }
     }
-// сброс всех предыдущих маршрутов при изменении маршрута пользователем, чтобы они не накладывались друг на друга
+    
     func resetMapView(withNew directions: MKDirections) {
         
         mapView.removeOverlays(mapView.overlays)
