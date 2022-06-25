@@ -21,7 +21,6 @@ class NewPlaceTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        saveButton.isEnabled = false
         placeLocationTF.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         placeNameTF.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setUpEditScreen()
@@ -122,7 +121,7 @@ class NewPlaceTVC: UITableViewController {
     
     private func setupNavigationBar() {
         if let topItem = navigationController?.navigationBar.topItem {
-            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil) //  кастомизация кнопки вовзрата
+            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
         navigationItem.leftBarButtonItem = nil
         title = currentPlace?.name
@@ -146,8 +145,6 @@ extension NewPlaceTVC: UITextFieldDelegate {
     @objc private func textFieldChanged() {
         if placeLocationTF.text?.isEmpty == false && placeNameTF.text?.isEmpty == false {
            saveButton.isEnabled = true
-        } else {
-           saveButton.isEnabled = false
         }
     }
 }
