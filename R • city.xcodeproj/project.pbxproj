@@ -12,7 +12,6 @@
 		AF3C63D0284F420000337E95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C63CF284F420000337E95 /* AppDelegate.swift */; };
 		AF3C63D2284F420000337E95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C63D1284F420000337E95 /* SceneDelegate.swift */; };
 		AF3C63D7284F420000337E95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3C63D5284F420000337E95 /* Main.storyboard */; };
-		AF3C63DA284F420000337E95 /* R___city.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF3C63D8284F420000337E95 /* R___city.xcdatamodeld */; };
 		AF3C63DC284F420600337E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3C63DB284F420600337E95 /* Assets.xcassets */; };
 		AF3C63DF284F420600337E95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3C63DD284F420600337E95 /* LaunchScreen.storyboard */; };
 		AF3C63E7284F476400337E95 /* MainScreenTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C63E6284F476400337E95 /* MainScreenTVC.swift */; };
@@ -29,7 +28,6 @@
 		AF3C63CF284F420000337E95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3C63D1284F420000337E95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF3C63D6284F420000337E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF3C63D9284F420000337E95 /* R___city.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "R___city.xcdatamodel"; sourceTree = "<group>"; };
 		AF3C63DB284F420600337E95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF3C63DE284F420600337E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF3C63E0284F420600337E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				AF3C63D5284F420000337E95 /* Main.storyboard */,
 				AF3C63DD284F420600337E95 /* LaunchScreen.storyboard */,
 				AF3C63E0284F420600337E95 /* Info.plist */,
-				AF3C63D8284F420000337E95 /* R___city.xcdatamodeld */,
 			);
 			path = "R • city";
 			sourceTree = "<group>";
@@ -258,7 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3C63E7284F476400337E95 /* MainScreenTVC.swift in Sources */,
-				AF3C63DA284F420000337E95 /* R___city.xcdatamodeld in Sources */,
 				AF3C63ED284F69A400337E95 /* NewPlaceTVC.swift in Sources */,
 				AF2B9545284FB1E700D44716 /* Manager.swift in Sources */,
 				AF3C63D0284F420000337E95 /* AppDelegate.swift in Sources */,
@@ -489,19 +485,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AF3C63D8284F420000337E95 /* R___city.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AF3C63D9284F420000337E95 /* R___city.xcdatamodel */,
-			);
-			currentVersion = AF3C63D9284F420000337E95 /* R___city.xcdatamodel */;
-			path = "R___city.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AF3C63C4284F420000337E95 /* Project object */;
 }

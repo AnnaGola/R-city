@@ -13,6 +13,7 @@ class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     var places: Results<Place>!
     
+
     @IBOutlet weak var mapWithAllPlaces: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,6 +21,12 @@ class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         super.viewDidLoad()
         swipeObserver()
         places = realm.objects(Place.self)
+//        
+//        viewCell.layer.shadowColor = UIColor.black.cgColor
+//        viewCell.layer.shadowOpacity = 0.2
+//        viewCell.layer.shadowOffset = .zero
+//        viewCell.layer.shadowRadius = 10
+//        viewCell.layer.cornerRadius = 10
     }
     
     // MARK: - Table view data source
@@ -74,7 +81,7 @@ class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
         deleteAction.backgroundColor = .systemRed
         deleteAction.image = UIImage(systemName: "trash")
-        return UISwipeActionsConfiguration(actions: [deleteAction])  // кастомизация функции удаления по свайпу влево с добавлением иконки вместо слова
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
     // MARK: - Navigation
@@ -96,6 +103,8 @@ class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     @IBAction func mapPressed(_ sender: UIBarButtonItem) {
+        
     }
+    
   
 }
