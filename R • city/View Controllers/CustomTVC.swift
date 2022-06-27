@@ -23,7 +23,7 @@ final class CustomTVC: UITableViewCell {
             self.viewCell.layer.shadowOpacity = 0.1
             self.viewCell.layer.shadowOffset = .zero
             self.viewCell.layer.shadowRadius = 10
-            self.viewCell.layer.cornerRadius = 15
+            self.viewCell.layer.cornerRadius = 10
         }
     }
 }

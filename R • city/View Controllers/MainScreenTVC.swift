@@ -21,12 +21,6 @@ class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         super.viewDidLoad()
         swipeObserver()
         places = realm.objects(Place.self)
-//        
-//        viewCell.layer.shadowColor = UIColor.black.cgColor
-//        viewCell.layer.shadowOpacity = 0.2
-//        viewCell.layer.shadowOffset = .zero
-//        viewCell.layer.shadowRadius = 10
-//        viewCell.layer.cornerRadius = 10
     }
     
     // MARK: - Table view data source
@@ -44,9 +38,7 @@ class MainScreenTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.locationLabel.text = place.location
         cell.descriptionLabel.text = place.shortDescription
         cell.imageOfPlace.image = UIImage(data: place.imageData!)
-        cell.imageOfPlace.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 5
         cell.imageOfPlace.clipsToBounds = true
-        // работа с изображением на главном экране
         
         return cell
     }
