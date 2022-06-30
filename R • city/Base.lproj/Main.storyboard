@@ -39,23 +39,23 @@
                                                                 <constraint firstAttribute="width" constant="105" id="hV8-ZE-tiS"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XvR-e4-kiN">
-                                                            <rect key="frame" x="113" y="13" width="75.5" height="85.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DYH-li-6ax">
+                                                            <rect key="frame" x="120" y="8" width="239" height="89"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS8-ct-tzE">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="48.5" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="239" height="26.5"/>
                                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob6-7C-OcB">
-                                                                    <rect key="frame" x="0.0" y="37" width="75.5" height="17.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob6-7C-OcB">
+                                                                    <rect key="frame" x="0.0" y="31.5" width="239" height="26"/>
                                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5V-MZ-v46">
-                                                                    <rect key="frame" x="0.0" y="70.5" width="49.5" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="62.5" width="239" height="26.5"/>
                                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -65,10 +65,12 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="DYH-li-6ax" secondAttribute="bottom" constant="8" id="24F-aa-lsn"/>
                                                         <constraint firstAttribute="bottom" secondItem="nNb-63-AIW" secondAttribute="bottom" id="4A0-jB-Q4x"/>
-                                                        <constraint firstItem="XvR-e4-kiN" firstAttribute="leading" secondItem="nNb-63-AIW" secondAttribute="trailing" constant="8" symbolic="YES" id="D1D-7W-JEc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DYH-li-6ax" secondAttribute="trailing" constant="15" id="6c8-0h-VIh"/>
                                                         <constraint firstItem="nNb-63-AIW" firstAttribute="top" secondItem="Hcp-BM-XJe" secondAttribute="top" id="KZi-MJ-3Hh"/>
-                                                        <constraint firstItem="XvR-e4-kiN" firstAttribute="top" secondItem="Hcp-BM-XJe" secondAttribute="top" constant="13" id="RM9-Tm-mEm"/>
+                                                        <constraint firstItem="DYH-li-6ax" firstAttribute="leading" secondItem="nNb-63-AIW" secondAttribute="trailing" constant="15" id="WDU-ae-Kw6"/>
+                                                        <constraint firstItem="DYH-li-6ax" firstAttribute="top" secondItem="Hcp-BM-XJe" secondAttribute="top" constant="8" id="d6K-7h-n8v"/>
                                                         <constraint firstItem="nNb-63-AIW" firstAttribute="leading" secondItem="Hcp-BM-XJe" secondAttribute="leading" id="eE7-cF-QZj"/>
                                                     </constraints>
                                                 </view>
@@ -497,8 +499,8 @@
         <image name="Photo" width="195" height="196"/>
         <image name="Point" width="165" height="234.5"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="map" width="50" height="50"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" width="50" height="50"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
         <image name="point.topleft.down.curvedto.point.filled.bottomright.up" catalog="system" width="121" height="128"/>
