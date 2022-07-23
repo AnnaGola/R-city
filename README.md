@@ -9,6 +9,13 @@
 * Вёрстка кодом и в storyboard
 * В проекте я не использую свойства, которые могут принимать замыкания и вести за собой утечку памяти, работала только с методами.
 
+## Launch Screen и Архитектура проекта
+
+https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-07-23%20at%2017.10.33.png" width="160">. 
+
+<img src="https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/Снимок%20экрана%202022-07-23%20в%2017.16.59.png" width="160">
+
+
 ## Главный экран 
 
 Изначально главный экран инициализируется для пользователя только Заголовком экрана, в данном случае рассматривается на примере города Суздаль, также отображается занчек добавления нового места в виде "+". 
@@ -20,7 +27,7 @@
 
 При нажатии на "+" в правом верхнем углу экрана, пользователь перейдет на другой экран под названием "New Place" в котором может выбрать изображение из фотоальбома или сделать снимок на месте.
 
- <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/IMG_7287.PNG" width="160">.   <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/IMG_7288.PNG" width="160">
+ <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-07-23%20at%2017.21.28.png" width="160">.   <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-07-23%20at%2017.21.34.png" width="160">
 
 Если же пользователь не прикрепит фото к месту, оно прикрепится по дефолту из каталога assets.
 
