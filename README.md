@@ -11,9 +11,7 @@
 
 ## Launch Screen и Архитектура проекта
 
-https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-07-23%20at%2017.10.33.png" width="160">. 
-
-<img src="https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/Снимок%20экрана%202022-07-23%20в%2017.16.59.png" width="160">
+<img src="https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/launcchscreen.png" width="160">.  <img src="https://github.com/AnnaGola/R-city/blob/realmBranch/Screenshots/Снимок%20экрана%202022-07-23%20в%2017.16.59.png" width="190">
 
 
 ## Главный экран 
